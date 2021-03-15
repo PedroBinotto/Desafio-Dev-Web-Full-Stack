@@ -19,9 +19,6 @@
 			{{ form.hidden_tag() }}
 			<div class="col-md-4 form-element">
 				<div class='form-group'>
-					<div>
-						{{ form.num1.label(class='form-control-label') }}
-					</div>
 					{% if form.num1.errors %}
 						<div>
 							{{ form.num1(class='form-control-label form-control-lg form-custom is-invalid') }}
@@ -43,9 +40,6 @@
 
 			<div class="col-md-4 form-element">
 				<div class='form-group'>
-					<div>
-						{{ form.num2.label(class='form-control-label') }}
-					</div>
 					{% if form.num2.errors %}
 						<div>
 							{{ form.num2(class='form-control-label form-control-lg form-custom is-invalid') }}

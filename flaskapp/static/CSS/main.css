@@ -3,20 +3,21 @@ body {
   color: #333333;
 }
 
-a {
-  color: #f1f1f1;
-}
-
-a:hover {
-  color: #ffffff;
-}
-
 h1, h2, h3, h4, h5, h6 {
   color: #444444;
 }
 
 .bg-steel {
   background-color: #5f788a;
+  color: #f1f1f1;
+}
+
+.bg-steel a {
+  color: #f0f1f1;
+}
+
+.bg-steel a:hover {
+  color: #ffffff;
 }
 
 .nav-item {

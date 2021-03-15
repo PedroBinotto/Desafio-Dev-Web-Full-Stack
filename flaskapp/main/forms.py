@@ -1,9 +1,9 @@
 from flask_wtf import FlaskForm
 from wtforms import IntegerField, SubmitField
-from wtforms.validators import DataRequired, ValidationError
+from wtforms.validators import InputRequired, ValidationError
 
 class InputForm(FlaskForm):
-	num1 = IntegerField('Inserir Valor do Número...', validators=[DataRequired()])
-	num2 = IntegerField('Inserir Valor do Número...', validators=[DataRequired()])
+	num1 = IntegerField(validators=[InputRequired('Você precisa informar um número!')], render_kw={'placeholder': 'Inserir Valor do Número...'})
+	num2 = IntegerField(validators=[InputRequired('Você precisa informar um número!')], render_kw={'placeholder': 'Inserir Valor do Número...'})
 
 	submit =  SubmitField('Calcular Números')
