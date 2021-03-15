@@ -1,0 +1,82 @@
+{% extends 'layout.html' %}
+
+
+{% block head %}
+	<script src="{{ url_for('static', filename='JS/main.js') }}" ></script>
+{% endblock head %}
+
+{% block content %}
+<div class='content-section'>
+	<div class='row'>
+		<p>
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		</p>
+	</div>
+
+
+	<form method='POST', action=''>
+		<div class='row'>
+			{{ form.hidden_tag() }}
+			<div class="col-md-4 form-element">
+				<div class='form-group'>
+					<div>
+						{{ form.num1.label(class='form-control-label') }}
+					</div>
+					{% if form.num1.errors %}
+						<div>
+							{{ form.num1(class='form-control-label form-control-lg form-custom is-invalid') }}
+						</div>
+						<div class='invalid-feedback d-block'>
+							{% for error in form.num1.errors %}
+								<span>
+									{{ error }}
+								</span>
+							{% endfor %}
+						</div>
+					{% else %}
+						<div>
+							{{ form.num1(class='form-control-label form-control-lg form-custom') }}
+						</div>
+					{% endif %}
+				</div>
+			</div>
+
+			<div class="col-md-4 form-element">
+				<div class='form-group'>
+					<div>
+						{{ form.num2.label(class='form-control-label') }}
+					</div>
+					{% if form.num2.errors %}
+						<div>
+							{{ form.num2(class='form-control-label form-control-lg form-custom is-invalid') }}
+						</div>
+						<div class='invalid-feedback d-block'>
+							{% for error in form.num2.errors %}
+								<span>
+									{{ error }}
+								</span>
+							{% endfor %}
+						</div>
+					{% else %}
+						<div>
+							{{ form.num2(class='form-control-label form-control-lg form-custom') }}
+						</div>
+					{% endif %}
+				</div>
+			</div>
+
+			<div class="col-md-4 form-element">
+				<div class='form-group button-wrapper'>
+					{{ form.submit(class='btn btn-outline-info') }}
+				</div>
+			</div>
+		</div>
+	</form>
+	{% if results %}
+	<div class="row">
+		{{ results }}
+	</div>
+	{% endif %}
+</div>
+{% endblock content %}
+
