@@ -3,7 +3,7 @@
 
 ### Introdução/Apresentação
 
-**Seja bem vindo!**,
+**Seja bem vindo!**
 
 Este repositório é a minha solução para o Desafio Dev Full Stack do processo seletivo dos laboratórios Bridge. Trata-se de um *WebApp* que calcula todos os números primos dentro dos limites informados pelo usuário através de um formulário.
 O aplicativo também mantém um histórico dos valores informados, que são mantidos em uma base de dados no servidor, registrando os dados informados e a Data/Hora em que foi feito.
@@ -13,7 +13,7 @@ O aplicativo também mantém um histórico dos valores informados, que são mant
 O Backend do aplicativo é escrito em Python3 utilizando a framework web [Flask](https://flask.palletsprojects.com/en/1.1.x/) para construção de rotas e *templating* das páginas, e as extenções [Flask-SQLAlchemy](https://flask-sqlalchemy.palletsprojects.com/en/2.x/) e [Flask-WTF](https://flask-wtf.readthedocs.io/en/stable/) para integração de bancos de dados e modelagem de formulários, respectivamente.
 As bases de dados do aplicativo são gerenciadas pelo banco MariaDB/MySQL (ambos são compatíveis) e conectadas ao aplicativo utilizando as bibliotecas PyMySQL e SQLAlchemy.
 
-No Frontend, foi utilizada a framework [Bootstrap 4](https://getbootstrap.com/docs/4.0/getting-started/introduction/) paro s temas pré definidos (HTML+CSS) e a funcionalidade de layout adaptável (*responseive*) para displays de tamanhos variáveis.
+No Frontend, foi utilizada a framework [Bootstrap 4](https://getbootstrap.com/docs/4.0/getting-started/introduction/) para os temas pré definidos (HTML+CSS) e a funcionalidade de layout adaptável (*responseive*) para displays de tamanhos variáveis.
  
 ### Instalação/Execução Local
 > OBS.: Detalhes da instalação previstos para um ambiente **Linux**, como foi utilizado no desenvolvimento do projeto.
