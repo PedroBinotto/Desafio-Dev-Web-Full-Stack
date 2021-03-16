@@ -6,19 +6,19 @@
 **Seja bem vindo!**
 
 Este repositório é a minha solução para o Desafio Dev Full Stack do processo seletivo dos laboratórios Bridge. Trata-se de um *WebApp* que calcula todos os números primos dentro dos limites informados pelo usuário através de um formulário.
-O aplicativo também mantém um histórico dos valores informados, que são mantidos em uma base de dados no servidor, registrando os dados informados e a Data/Hora em que foi feito.
+O aplicativo também mantém um histórico dos valores informados em uma base de dados no servidor, registrando os dados informados e a Data/Hora em que foi feito.
 
 ### Especificações
 
 O Backend do aplicativo é escrito em Python3 utilizando a framework web [Flask](https://flask.palletsprojects.com/en/1.1.x/) para construção de rotas e *templating* das páginas, e as extenções [Flask-SQLAlchemy](https://flask-sqlalchemy.palletsprojects.com/en/2.x/) e [Flask-WTF](https://flask-wtf.readthedocs.io/en/stable/) para integração de bancos de dados e modelagem de formulários, respectivamente.
 As bases de dados do aplicativo são gerenciadas pelo banco MariaDB/MySQL (ambos são compatíveis) e conectadas ao aplicativo utilizando as bibliotecas PyMySQL e SQLAlchemy.
 
-No Frontend, foi utilizada a framework [Bootstrap 4](https://getbootstrap.com/docs/4.0/getting-started/introduction/) para os temas pré definidos (HTML+CSS) e a funcionalidade de layout adaptável (*responseive*) para displays de tamanhos variáveis.
+No Frontend, foi utilizada a framework [Bootstrap 4](https://getbootstrap.com/docs/4.0/getting-started/introduction/) para os temas pré definidos (HTML+CSS) e a funcionalidade de layout adaptável (*responsive design*) para displays de tamanhos variáveis.
  
 ### Instalação/Execução Local
 > OBS.: Detalhes da instalação previstos para um ambiente **Linux**, como foi utilizado no desenvolvimento do projeto.
 
-Antes de qualquer outra coisa, fazer o download/clonar repositório para sua máquinar e extrair os arquivos.
+Antes de qualquer outra coisa, fazer o download/clonar repositório para sua máquina e extrair os arquivos.
 
 ##### Configurando um Ambiente Virtual
 
@@ -28,6 +28,7 @@ Para a configuração do ambiente virtual:
 * Certifique-se de que possui o **pip** instalado em seu sistema executando `pip -h` em seu terminal.
   * Se o terminal exibir o texto de ajuda do pip, então você já possui a ferramenta instalada.
   * Caso contrário, [instale o pip em seu sistema](https://pip.pypa.io/en/latest/installing/).
+* Instale a ferramenta de ambientes com o comando `pip install virtualenv`
 * Em seguida, crie um ambiente Python3 para a execução do aplicativo com `virtualenv -p python3 nomeDoSeuAmbiente`
 * Para ativar o ambiente, execute o comando `source nomeDoSeuAmbiente/bin/activate`
 * Quando desejar desativa-lo, simplesemente execute `deactivate`
@@ -43,7 +44,7 @@ Para a instalação dos pacotes:
 
 ##### Instalação do Gerenciador de Bancos de Dados
 
-O aplicativo conta com a função de registro dos dados informados, e para isso utiliza uma base de dados locais. Para isso, é necessário que haja um gerenciador de bancos de dados instalado no sistema. No desenvolvimento do projeto, foi utilizado o banco [**MariaDB**](https://mariadb.org/), mas também pode ser utilizado com **MySQL**. 
+O aplicativo conta com a função de registro dos dados informados, e para isso utiliza uma base de dados locais. Para isso, é necessário que haja um gerenciador de bancos de dados instalado no sistema. No desenvolvimento do projeto, foi utilizado o banco [**MariaDB**](https://mariadb.org/), mas também pode ser executado com **MySQL**. 
 
 Para a instalação do gerenciador MariaDB:
 * Atualize seu índice de pacotes (`sudo apt update`)
@@ -82,8 +83,8 @@ Alternativamente;
 
 Para executar o aplicativo **SEM variáveis de ambiente** (menos seguro):
 * Navegue até o diretório onde extraiu os arquivos do aplicativo.
-* Acesse o diretório 'flaskapp'
-* Localize o arquivo de configuração 'config.py' e abra em um editor de texto de sua escolha.
+* Acesse o diretório '**flaskapp**'
+* Localize o arquivo de configuração '**config.py**' e abra em um editor de texto de sua escolha.
 
 Você deverá encontrar o seguinte código:
 
@@ -98,7 +99,7 @@ class Config:
 
 ```
 
-Para reconfigurar o aplicativo, basta remover a linha de código 06 e "*descomentar*" a linha 05, substituindo sua senha e nome da base de dados.
+Para reconfigurar o aplicativo, basta remover a linha de código **06** e "*descomentar*" a linha **05**, substituindo sua senha e nome da base de dados.
 
 **Finalmente**,
 
