@@ -91,7 +91,7 @@ Para configurar as variáveis de sistema:
 * Você deverá encontrar o arquivo **.bash_profile** em meio a essa lista.
 * Abra o arquivo com um editor de texto de sua escolha.
 * Para adicionar a variável de configuração:
-  * Adicione ao final do arquivo o código `export FLASKAPP_DATABASE_URI="mysql+pymysql://root:senhaDoBancoDeDados@licalhost/nomeDaBaseDeDados"`
+  * Adicione ao final do arquivo o código `export DATABASE_URL="mysql+pymysql://root:senhaDoBancoDeDados@licalhost/nomeDaBaseDeDados"`
   * Salve as modificações e saia do editor.
 
 Alternativamente;
