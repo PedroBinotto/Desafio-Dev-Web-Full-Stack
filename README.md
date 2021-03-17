@@ -68,6 +68,19 @@ Após definir os dados de administrador do banco, conecte-se através do termina
 * Para criar a base de dados, execute `CREATE DATABASE nomeDeSuaBaseDeDados`
 * Digite `exit` para sair do gerenciador.
 
+Após isso, navegue novamente à raíz do diretório de seu aplicativo e inicie um terminal.
+Para configurar as tabelas do seu banco de dados, será necessário importar os modelos do aplicativo. Isso pode ser feito através da seguinte sequência de comandos:
+
+```
+$ python
+$ from flaskapp import create_app, db
+$ app = create_app()
+$ from flaskapp.models import *
+$ with app.app_context():
+$     db.create_all()
+$ exit()
+```
+
 ##### Exportando Variáveis de Ambiente/ Configuração do Aplicativo
 
 Para garantir maior segurança do aplicativo, é uma boa prática manter dados específicos de configuração armazenadas como variáveis de ambiente, e não escritas diretamente no código-fonte. No respositório, aplicativo está configurado para importar estas configurações. Caso hajam complicações para configurar variáveis de sistema, pode ser rapidamente reconfigurado para operar com as informações escritas diretamente no arquivo **flaskapp/config.py**.
