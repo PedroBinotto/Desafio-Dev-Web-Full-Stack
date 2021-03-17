@@ -68,7 +68,7 @@ Após definir os dados de administrador do banco, conecte-se através do termina
 * Para criar a base de dados, execute `CREATE DATABASE nomeDeSuaBaseDeDados`
 * Digite `exit` para sair do gerenciador.
 
-Após isso, navegue novamente à raíz do diretório de seu aplicativo e inicie um terminal.
+Após isso, navegue novamente à raíz do diretório de seu aplicativo e inicie um terminal (certifique-se de utilizar o ambiente virtual do projeto).
 Para configurar as tabelas do seu banco de dados, será necessário importar os modelos do aplicativo. Isso pode ser feito através da seguinte sequência de comandos:
 
 ```
