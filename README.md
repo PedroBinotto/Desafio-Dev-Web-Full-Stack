@@ -8,6 +8,8 @@
 Este repositório é a minha solução para o Desafio Dev Full Stack do processo seletivo dos laboratórios Bridge. Trata-se de um *WebApp* que calcula todos os números primos dentro dos limites informados pelo usuário através de um formulário.
 O aplicativo também mantém um histórico dos valores informados em uma base de dados no servidor, registrando os dados informados e a Data/Hora em que foi feito.
 
+Demonstração em servidor [Heroku](https://des-fullstack.herokuapp.com/history)
+
 ### Especificações
 
 O Backend do aplicativo é escrito em Python3 utilizando a framework web [Flask](https://flask.palletsprojects.com/en/1.1.x/) para construção de rotas e *templating* das páginas, e as extenções [Flask-SQLAlchemy](https://flask-sqlalchemy.palletsprojects.com/en/2.x/) e [Flask-WTF](https://flask-wtf.readthedocs.io/en/stable/) para integração de bancos de dados e modelagem de formulários, respectivamente.
