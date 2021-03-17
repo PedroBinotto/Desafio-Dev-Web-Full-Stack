@@ -3,5 +3,5 @@ import pymysql
 
 class Config:
 	# SQLALCHEMY_DATABASE_URI = 'mysql+pymysql://root:senha@localhost/app'
-	SQLALCHEMY_DATABASE_URI = os.environ.get('FLASKAPP_DATABASE_URI')
+	SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL')
 
