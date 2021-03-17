@@ -8,7 +8,7 @@
 Este repositório é a minha solução para o Desafio Dev Full Stack do processo seletivo dos laboratórios Bridge. Trata-se de um *WebApp* que calcula todos os números primos dentro dos limites informados pelo usuário através de um formulário.
 O aplicativo também mantém um histórico dos valores informados em uma base de dados no servidor, registrando os dados informados e a Data/Hora em que foi feito.
 
-Demonstração em servidor [Heroku](https://des-fullstack.herokuapp.com/history)
+Demonstração em servidor [Heroku](https://des-fullstack.herokuapp.com/)
 
 ### Especificações
 
