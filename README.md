@@ -68,19 +68,6 @@ Após definir os dados de administrador do banco, conecte-se através do termina
 * Para criar a base de dados, execute `CREATE DATABASE nomeDeSuaBaseDeDados`
 * Digite `exit` para sair do gerenciador.
 
-Após isso, navegue novamente à raíz do diretório de seu aplicativo e inicie um terminal (certifique-se de utilizar o ambiente virtual do projeto).
-Para configurar as tabelas do seu banco de dados, será necessário importar os modelos do aplicativo. Isso pode ser feito através da seguinte sequência de comandos:
-
-```
-$ python
-$ from flaskapp import create_app, db
-$ app = create_app()
-$ from flaskapp.models import *
-$ with app.app_context():
-$     db.create_all()
-$ exit()
-```
-
 ##### Exportando Variáveis de Ambiente/ Configuração do Aplicativo
 
 Para garantir maior segurança do aplicativo, é uma boa prática manter dados específicos de configuração armazenadas como variáveis de ambiente, e não escritas diretamente no código-fonte. No respositório, aplicativo está configurado para importar estas configurações. Caso hajam complicações para configurar variáveis de sistema, pode ser rapidamente reconfigurado para operar com as informações escritas diretamente no arquivo **flaskapp/config.py**.
@@ -91,10 +78,10 @@ Para configurar as variáveis de sistema:
 * Você deverá encontrar o arquivo **.bash_profile** em meio a essa lista.
 * Abra o arquivo com um editor de texto de sua escolha.
 * Para adicionar a variável de configuração:
-  * Adicione ao final do arquivo o código `export DATABASE_URL="mysql+pymysql://root:senhaDoBancoDeDados@licalhost/nomeDaBaseDeDados"`
+  * Adicione ao final do arquivo o código `export DATABASE_URL="mysql+pymysql://root:senhaDoBancoDeDados@localhost/nomeDaBaseDeDados"`
   * Salve as modificações e saia do editor.
 
-Alternativamente;
+**Alternativamente**;
 
 Para executar o aplicativo **SEM variáveis de ambiente** (menos seguro):
 * Navegue até o diretório onde extraiu os arquivos do aplicativo.
@@ -110,11 +97,25 @@ import pymysql
 
 class Config:
 	# SQLALCHEMY_DATABASE_URI = 'mysql+pymysql://root:senha@localhost/app'
-	SQLALCHEMY_DATABASE_URI = os.environ.get('FLASKAPP_DATABASE_URI')
+	SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL')
 
 ```
 
 Para reconfigurar o aplicativo, basta remover a linha de código **06** e "*descomentar*" a linha **05**, substituindo sua senha e nome da base de dados.
+
+##### Importando os Modelos de BD
+
+Para configurar as tabelas do seu banco de dados, será necessário importar os modelos do aplicativo. Para fazer isso, navegue até o diretório raíz do aplicativo e, dentro do ambiente virtual do projeto, execute a seguinte sequência de comandos:
+
+```
+$ python
+$ from flaskapp import create_app, db
+$ app = create_app()
+$ from flaskapp.models import *
+$ with app.app_context():
+$     db.create_all()
+$ exit()
+```
 
 **Finalmente**,
 
